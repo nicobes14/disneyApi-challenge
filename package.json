@@ -1,0 +1,35 @@
+{
+  "name": "nueva-carpeta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/server.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node src/server.js",
+    "dev": "cross-env NODE_ENV=development nodemon src/server.js",
+    "test": "cross-env  PORT=4000 jest --verbose --forceExit --detectOpenHandles",
+    "fasttest": "cross-env  PORT=4000 NODE_ENV=test jest --forceExit --detectOpenHandles --testPathIgnorePatterns=tests/auth.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^7.6.2",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.4",
+    "sequelize": "^6.17.0",
+    "sqlite3": "^5.0.2",
+    "swagger-ui-express": "^4.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "sequelize-cli": "^6.4.1",
+    "jest": "^27.2.1",
+    "supertest": "^6.1.6"
+  }
+}
