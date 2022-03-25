@@ -4,8 +4,8 @@
   "description": "",
   "main": "app/server.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production node src/server.js",
-    "dev": "cross-env NODE_ENV=development nodemon src/server.js",
+    "start": "cross-env NODE_ENV=production node app/server.js",
+    "dev": "cross-env NODE_ENV=development nodemon app/server.js",
     "test": "cross-env  PORT=4000 jest --verbose --forceExit --detectOpenHandles",
     "fasttest": "cross-env  PORT=4000 NODE_ENV=test jest --forceExit --detectOpenHandles --testPathIgnorePatterns=tests/auth.test.js"
   },
