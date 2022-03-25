@@ -259,7 +259,7 @@ describe('users (auth)', () => {
   test('JWT', () => {
     const user = User.build(dummyUser)
     const token = user.generateJwt()
-    const decoded = jwt.verify(token, 'jwtsecret')
+    const decoded = jwt.verify(token, process.env.JWT_SECRET||'jwtsecret')
 
     expect(decoded.email).toBe(user.email)
     expect(() => jwt.verify(token, 'qwerty')).toThrow(jwt.JsonWebTokenError)
